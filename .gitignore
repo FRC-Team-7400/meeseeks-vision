@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+*.h264
+*.pch
+*.mp4
+*,jpg
+
+/x64/*
+/Release/*
+/MeeseeksVision/Release/*
+/MeeseeksVision/res/*
+/MeeseeksVision/x64/*
+/.vs/*
+
+

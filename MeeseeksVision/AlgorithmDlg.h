@@ -32,18 +32,11 @@ protected:
    void SetScrollBars();
    void SetRGBHSV();
 
-   afx_msg void OnPaint();
-   afx_msg void OnDestroy();
    afx_msg void OnPropButtonClicked();
    afx_msg void OnPropButtonRGBClicked();
    afx_msg void OnPropButtonHSVClicked();
 
-
-   afx_msg HCURSOR OnQueryDragIcon();
-
    afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
-
-   LRESULT OnNewParams(WPARAM wParam, LPARAM lParam);
 
    DECLARE_MESSAGE_MAP()
 };

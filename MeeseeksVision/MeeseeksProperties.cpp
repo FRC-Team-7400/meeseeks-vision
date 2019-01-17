@@ -91,6 +91,16 @@ void MeeseeksProperties::SetProperties()
    algorithim.erode = GetInt(ALGORITHIM_ERODE, ALGORITHIM_DEFAULT_ERODE);
    algorithim.dilate = GetInt(ALGORITHIM_DILATE, ALGORITHIM_DEFAULT_DILATE);
 
+   algorithim.minTapeArea = GetInt(ALGORITHIM_MIN_TAPE_AREA, ALGORITHIM_DEFAULT_MIN_TAPE_AREA);
+   algorithim.minTapeAngle = GetInt(ALGORITHIM_MIN_TAPE_ANGLE, ALGORITHIM_DEFAULT_MIN_TAPE_ANGLE);
+   algorithim.maxTapeAngle = GetInt(ALGORITHIM_MAX_TAPE_ANGLE, ALGORITHIM_DEFAULT_MAX_TAPE_ANGLE);
+   algorithim.minTapeHeightRatio = GetDouble(ALGORITHIM_MIN_TAPE_HEIGHT_RATIO, ALGORITHIM_DEFAULT_MIN_TAPE_HEIGHT_RATIO);
+   algorithim.maxTapeHeightRatio = GetDouble(ALGORITHIM_MAX_TAPE_HEIGHT_RATIO, ALGORITHIM_DEFAULT_MAX_TAPE_HEIGHT_RATIO);
+   algorithim.minTapeYDistRatio = GetDouble(ALGORITHIM_MIN_TAPE_Y_DIST_RATIO, ALGORITHIM_DEFAULT_MIN_TAPE_Y_DIST_RATIO);
+   algorithim.maxTapeYDistRatio = GetDouble(ALGORITHIM_MAX_TAPE_Y_DIST_RATIO, ALGORITHIM_DEFAULT_MAX_TAPE_Y_DIST_RATIO);
+   algorithim.minTapeXDistRatio = GetDouble(ALGORITHIM_MIN_TAPE_X_DIST_RATIO, ALGORITHIM_DEFAULT_MIN_TAPE_X_DIST_RATIO);
+   algorithim.maxTapeXDistRatio = GetDouble(ALGORITHIM_MAX_TAPE_X_DIST_RATIO, ALGORITHIM_DEFAULT_MAX_TAPE_X_DIST_RATIO);
+
    serverPort = GetInt(SERVER_PORT, DEFAULT_SERVER_PORT);
    networkTableAddress = GetString(NETWORK_TABLE_ADDRESS, DEFAULT_NETWORK_TABLE_ADDRESS);
 }
@@ -171,6 +181,16 @@ void MeeseeksProperties::SaveToString(std::string &str)
    nameValueMap[ALGORITHIM_BLUR] = IntToString(algorithim.blur, stringValue);
    nameValueMap[ALGORITHIM_ERODE] = IntToString(algorithim.erode, stringValue);
    nameValueMap[ALGORITHIM_DILATE] = IntToString(algorithim.dilate, stringValue);
+
+   nameValueMap[ALGORITHIM_MIN_TAPE_AREA] = IntToString(algorithim.minTapeArea, stringValue);
+   nameValueMap[ALGORITHIM_MIN_TAPE_ANGLE] = IntToString(algorithim.minTapeAngle, stringValue);
+   nameValueMap[ALGORITHIM_MAX_TAPE_ANGLE] = IntToString(algorithim.maxTapeAngle, stringValue);
+   nameValueMap[ALGORITHIM_MIN_TAPE_HEIGHT_RATIO] = DoubleToString(algorithim.minTapeHeightRatio, stringValue);
+   nameValueMap[ALGORITHIM_MAX_TAPE_HEIGHT_RATIO] = DoubleToString(algorithim.maxTapeHeightRatio, stringValue);
+   nameValueMap[ALGORITHIM_MIN_TAPE_Y_DIST_RATIO] = DoubleToString(algorithim.minTapeYDistRatio, stringValue);
+   nameValueMap[ALGORITHIM_MAX_TAPE_Y_DIST_RATIO] = DoubleToString(algorithim.maxTapeYDistRatio, stringValue);
+   nameValueMap[ALGORITHIM_MIN_TAPE_X_DIST_RATIO] = DoubleToString(algorithim.minTapeXDistRatio, stringValue);
+   nameValueMap[ALGORITHIM_MAX_TAPE_X_DIST_RATIO] = DoubleToString(algorithim.maxTapeXDistRatio, stringValue);
 
    nameValueMap[SERVER_PORT] = IntToString(serverPort, stringValue);
    nameValueMap[NETWORK_TABLE_ADDRESS] = networkTableAddress;

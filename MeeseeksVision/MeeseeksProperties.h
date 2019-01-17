@@ -27,6 +27,15 @@ typedef struct {
    int blur;
    int erode;
    int dilate;
+   int minTapeArea;
+   int minTapeAngle;
+   int maxTapeAngle;
+   double minTapeHeightRatio;
+   double maxTapeHeightRatio;
+   double minTapeYDistRatio;
+   double maxTapeYDistRatio;
+   double minTapeXDistRatio;
+   double maxTapeXDistRatio;
 } AlgorithimParams;
 
 typedef struct {
@@ -61,6 +70,16 @@ typedef struct {
 #define ALGORITHIM_ERODE        "algorithim-erode"
 #define ALGORITHIM_DILATE       "algorithim-dilate"
 
+#define ALGORITHIM_MIN_TAPE_AREA         "algorithim-min-tape-area"
+#define ALGORITHIM_MIN_TAPE_ANGLE        "algorithim-min-tape-angle"
+#define ALGORITHIM_MAX_TAPE_ANGLE        "algorithim-max-tape-angle"
+#define ALGORITHIM_MIN_TAPE_HEIGHT_RATIO "algorithim-min-tape-height-ratio"
+#define ALGORITHIM_MAX_TAPE_HEIGHT_RATIO "algorithim-max-tape-height-ratio"
+#define ALGORITHIM_MIN_TAPE_Y_DIST_RATIO "algorithim-min-tape-y-dist-ratio"
+#define ALGORITHIM_MAX_TAPE_Y_DIST_RATIO "algorithim-max-tape-y-dist-ratio"
+#define ALGORITHIM_MIN_TAPE_X_DIST_RATIO "algorithim-min-tape-x-dist-ratio"
+#define ALGORITHIM_MAX_TAPE_X_DIST_RATIO "algorithim-max-tape-x-dist-ratio"
+
 #define ALGORITHIM_DEFAULT_DISPLAY_TYPE  1
 #define ALGORITHIM_DEFAULT_MIN_WIDTH     10
 #define ALGORITHIM_DEFAULT_MIN_HEIGHT    10
@@ -77,6 +96,16 @@ typedef struct {
 #define ALGORITHIM_DEFAULT_BLUR          3
 #define ALGORITHIM_DEFAULT_ERODE         3
 #define ALGORITHIM_DEFAULT_DILATE        3
+
+#define ALGORITHIM_DEFAULT_MIN_TAPE_AREA         500
+#define ALGORITHIM_DEFAULT_MIN_TAPE_ANGLE         65
+#define ALGORITHIM_DEFAULT_MAX_TAPE_ANGLE        120
+#define ALGORITHIM_DEFAULT_MIN_TAPE_HEIGHT_RATIO 0.8
+#define ALGORITHIM_DEFAULT_MAX_TAPE_HEIGHT_RATIO 1.2
+#define ALGORITHIM_DEFAULT_MIN_TAPE_Y_DIST_RATIO 0.0
+#define ALGORITHIM_DEFAULT_MAX_TAPE_Y_DIST_RATIO 0.2
+#define ALGORITHIM_DEFAULT_MIN_TAPE_X_DIST_RATIO 1.0
+#define ALGORITHIM_DEFAULT_MAX_TAPE_X_DIST_RATIO 2.5
 
 #define CAMERA_AUTO_EXPOSURE      "camera-auto-exposure"
 #define CAMERA_EXPOSURE_ABSOLUTE  "camera-exposure-absolute"
